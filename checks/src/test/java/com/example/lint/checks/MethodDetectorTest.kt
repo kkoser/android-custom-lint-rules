@@ -13,7 +13,7 @@ class MethodDetectorTest {
                     package com.test.enums;
                         
                     public enum MyTestEnum {
-                        MY_TEST_ENUM_VALUE();
+                        MY_TEST_ENUM_VALUE
                     }
                     """
                 ).indented()
