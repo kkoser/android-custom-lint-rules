@@ -1,18 +1,17 @@
 package com.android.example;
 
-import android.animation.Animator;
-import android.animation.ValueAnimator;
+import androidx.annotation.Dimension;
 
 public class AnimationTester {
 
-    private static Animator createVideoViewAlphaAnimator(boolean testBool) {
-        ValueAnimator alphaAnimator = testBool
-                ? ValueAnimator.ofFloat(0.0f, 0.5f)
-                : ValueAnimator.ofFloat(0.1f, 1.0f);
-        return alphaAnimator;
+    public static @Dimension(unit = Dimension.SP) int SP_VAL;
+
+    private static void createVideoViewAlphaAnimator(boolean testBool) {
+        useSpValue(SP_VAL);
     }
 
-    public static void doAnims() {
-        createVideoViewAlphaAnimator(true).start();
+    public static void useSpValue(@Dimension(unit = Dimension.SP) int val) {
+        TextOverlay overlay = new TextOverlay(val);
     }
+
 }
